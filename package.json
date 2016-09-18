@@ -1,0 +1,17 @@
+{
+  "name": "ncku-course",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "latest",
+    "express": "^3.4.7",
+    "express-partials": "^0.3.0",
+	"request": "latest",
+	"cheerio": "latest",
+	"async": "latest"
+  }
+}
+	

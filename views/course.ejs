@@ -1,0 +1,43 @@
+﻿<div class="row">
+	<div class="col-md-3">
+		<h2>學院</h2>
+		<div class="panel panel-default" style="height: 450px; overflow-y:scroll">
+			<ul class="list-group">
+				<% colleges.forEach(function(college){ %>
+					<a href="/course?college=<%= college %>" class="list-group-item <%  %>"><%= college %></a>
+				<% }) %>
+			</ul>		
+		</div>
+	</div>
+	<div class="col-md-3">
+		<h2>系所</h2>
+		<div class="panel panel-default" style="height: 450px; overflow-y:scroll">
+			<ul class="list-group">
+				<% depts.forEach(function(dept){ %>
+					<a href="/course?college=<%= college%>&dept_no=<%= dept.dept_no %>" class="list-group-item <%  %>"><%= dept.name %></a>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<h2>課程</h2>
+		<div class="panel panel-default" style="height: 450px; overflow-y:scroll">
+			<table class="table table-striped">
+				<tr>
+					<% courses.headers.forEach(function(header){%>
+						<th><%= header%></th>
+					<% }) %>
+				</tr>
+				<% courses.contents.forEach(function(content){%>
+					<tr>
+					
+						<td><%= content.name %></td>
+					
+					</tr>
+				<% }) %>
+			</table>
+			
+
+		</div>
+	</div>
+</div>
